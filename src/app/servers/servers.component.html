@@ -1,12 +1,32 @@
-<h3>servers works!</h3>
-
 <!-- selector: 'app-server' -->
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<!-- <app-server></app-server> -->
 
 <!-- selector: '[app-server]' -->
-<!-- <div app-server> </div> -->    
+<!-- <div app-server> </div> -->
 
 <!-- selector: '.app-server' -->
 <!-- <div class="app-server"> </div> -->
+
+<label>Server Name</label>
+
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->    <!-- 1-way data binding -->
+<input type="text" class="form-control" [(ngModel)]="serverName">   <!-- 2-way data binding -->
+<!--<p>{{ serverName }}</p>-->
+<hr>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> <!-- Event binding -->
+<!-- Property binding to enable the button after 2 sec -->
+<hr>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>   <!-- String interpolation -->
+<hr>
+<app-server></app-server>
+<app-server></app-server>
+<hr>
+
+<!-- ASSIGNMENT 2 -->
+<label> Assignment </label>
+<hr>
+<input type="text" class="form-control" [(ngModel)]="userName"> 
+<p>{{ userName }}</p> 
+<button class="btn btn-primary" [disabled]="!userName" (click)="resetUser()">Add User</button> 
+
