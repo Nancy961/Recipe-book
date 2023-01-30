@@ -9,14 +9,15 @@
 
 <label>Server Name</label>
 
-<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
-<input type="text" class="form-control" [(ngModel)]="serverName">
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->    <!-- 1-way data binding -->
+<input type="text" class="form-control" [(ngModel)]="serverName">   <!-- 2-way data binding -->
 <!--<p>{{ serverName }}</p>-->
 <hr>
-<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> <!-- Event binding -->
+<!-- Property binding to enable the button after 2 sec -->
 <hr>
 <!--<p [innerText]="allowNewServer"></p>-->
-<p>{{ serverCreationStatus }}</p>
+<p>{{ serverCreationStatus }}</p>   <!-- String interpolation -->
 <hr>
 <app-server></app-server>
 <app-server></app-server>
