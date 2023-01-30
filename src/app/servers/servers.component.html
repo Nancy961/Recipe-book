@@ -17,10 +17,16 @@
 <!-- Property binding to enable the button after 2 sec -->
 <hr>
 <!--<p [innerText]="allowNewServer"></p>-->
-<p>{{ serverCreationStatus }}</p>   <!-- String interpolation -->
+<!-- <p>{{ serverCreationStatus }}</p>   String interpolation -->
+
+<p *ngIf="serverCreated; else noServer">Server  '{{ serverName }}'  created!</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
 <hr>
+
 <app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 <hr>
 
 <!-- ASSIGNMENT 2 -->
