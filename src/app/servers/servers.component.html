@@ -21,3 +21,12 @@
 <hr>
 <app-server></app-server>
 <app-server></app-server>
+<hr>
+
+<!-- ASSIGNMENT 2 -->
+<label> Assignment </label>
+<hr>
+<input type="text" class="form-control" [(ngModel)]="userName"> 
+<p>{{ userName }}</p> 
+<button class="btn btn-primary" [disabled]="!userName" (click)="resetUser()">Add User</button> 
+
