@@ -1,3 +1,14 @@
+.sixthLog {
+    background-color:blue;
+    color: rgb(240, 238, 241);
+}
 h3 {
+    color: blueviolet;
+}
+
+p {
+    padding: 10px;
+    background-color: rgb(240, 249, 240);
+    border: 1px solid rgb(60, 58, 60);
     color: blueviolet;
 }

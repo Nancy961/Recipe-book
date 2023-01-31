@@ -29,10 +29,35 @@
 <app-server *ngFor="let server of servers"></app-server>
 <hr>
 
+
 <!-- ASSIGNMENT 2 -->
-<label> Assignment </label>
+<label> Assignment 2 </label>
 <hr>
 <input type="text" class="form-control" [(ngModel)]="userName"> 
 <p>{{ userName }}</p> 
 <button class="btn btn-primary" [disabled]="!userName" (click)="resetUser()">Add User</button> 
+<hr>
 
+
+
+<!-- ASSIGNMENT 3 -->
+<label> Assignment 3</label>
+<hr>
+<button class="btn btn-primary" (click)="buttonClicked()">Display details</button> 
+<p *ngIf="displayPara">
+    Secret Revealed!!
+</p>
+
+<!-- sol 1 : button click stores numbers -->
+<!-- 
+<div *ngFor="let clic of allClicks" [ngStyle]="{backgroundColor : clic > 4 ? 'blue' : 'transparent'}" [ngClass]="{sixthLog: clic > 4}">
+    {{ clic }} 
+</div> 
+-->
+
+
+<!-- sol 2 : button click stores timestamp-->
+
+<div *ngFor="let clic of allClicks; let i = index" [ngStyle]="{backgroundColor : i > 4 ? 'blue' : 'transparent'}" [ngClass]="{sixthLog: i > 4}">
+    {{ clic }} 
+</div>
